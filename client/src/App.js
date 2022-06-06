@@ -1,8 +1,17 @@
-import './App.css';
-
+// import './App.css';
 import {useState, useEffect} from 'react'
 
 function App() {
+
+//   const Heading1 = styled.h1`
+//     font-family: monospace;
+//     text-align: center;
+//     color: red;
+// `
+//   const Container1 = styled.div`
+//       background-color: black;
+//       border-radius: 15px;
+//   `
 
   const [data, setData] = useState('')
 
@@ -31,12 +40,14 @@ function App() {
     function showName () {
       setFirst(data.first)
       setLast(data.last)
+      document.getElementById('pageStyle').setAttribute("class", "first")
     }
     
     const showPlace = () => setAddress(data.address)
 
     const contactEmail = () => {
       setEmail(data.email)
+      document.getElementById('pageStyle').setAttribute("class", "second")
     }
 
     function contactNumber() {
@@ -70,7 +81,7 @@ function App() {
     console.log(linkedin)
 
   return (
-    <div className="App">
+    <div id="pageStyle">
 
       {/* in here render images on clicks for personal picture / city / contact information and links */}
 
