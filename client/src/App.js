@@ -35,19 +35,25 @@ function App() {
     
     const showPlace = () => setAddress(data.address)
 
-    function contact() {
-      setNumber(data.number)
+    const contactEmail = () => {
       setEmail(data.email)
     }
 
-    const linkedGit = () => {
+    function contactNumber() {
+      setNumber(data.number)
+    }
+
+    function getLinked(){
       setLinkedin(data.linkedin)
+    }
+
+    const getGit = () => {
       setGithub(data.github)
       setTimeout(() => {
         window.alert("THANKS FOR HANGING OUT WITH ME");
       }, "2000");
     }
-    
+
     // var context = new AudioContext();
     // var oscillator = context.createOscillator();
     // oscillator.type = "sine";
@@ -73,10 +79,14 @@ function App() {
       { first === '' ? <button onClick={showName}>Name</button> : null }
       <div>I am a Software Engineer and Web Developer living in: <h1>{address}</h1></div>
       { address === '' ? <button onClick={showPlace}>City</button> : null }
-      <div>Send me an email here: <h1><a href={"mailto:" + email}>{email}</a></h1> or call or text here: <h1>{number}</h1> to contact me.</div>
-      { number === '' ? <button onClick={contact}>Contact</button> : null }
-      <div>Also, Please go to: <h1><a href={"https://www." + linkedin} target="_blank">{linkedin}</a></h1> and: <h1><a href={"https://www." + github} target="_blank">{github}</a></h1> for Consideration</div>
-      { linkedin === '' ? <button onClick={linkedGit}>Links</button> : null }
+      <div>Send me an email here: <h1><a href={"mailto:" + email}>{email}</a></h1></div>
+      { email === '' ? <button onClick={contactEmail}>Email</button> : null }
+      <div>or call or text here: <h1>{number}</h1></div>
+      { number === '' ? <button onClick={contactNumber}>Number</button> : null }
+      <div>Also, Please visit me here: <h1><a href={"https://www." + linkedin} target="_blank">{linkedin}</a></h1></div>
+      { linkedin === '' ? <button onClick={getLinked}>LinkedIn</button> : null }
+      <div>and here: <h1><a href={"https://www." + github} target="_blank">{github}</a></h1></div>
+      { github === '' ? <button onClick={getGit}>Github</button> : null }
       
     </div>
   );
