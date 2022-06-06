@@ -23,7 +23,7 @@ module PortfolioIo
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.action_dispatch.cookies_same_site_protection = :strict
+    # config.action_dispatch.cookies_same_site_protection = :strict
 
     # Configuration for the application, engines, and railties goes here.
     #
