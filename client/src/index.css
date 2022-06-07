@@ -1,13 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.start{
+    font-family: monospace;
+    text-align: center;
+    color: white;
+}
+
 .first{
     font-family: monospace;
     text-align: center;
-    color: red;
-  }
-  
-.second{
-    font-family: monospace;
-    text-align: center;
     color: grey;
-    background-color: black;
-    font-size: large;
 }
+  
+.button{
+    border-radius: 15px;
+}
+

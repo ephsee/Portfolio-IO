@@ -1,3 +1,8 @@
 class CommentsController < ApplicationController
-    attributes :comment
+    
+    def index
+        render json: Comment.all, status: :ok
+    end
+
+
 end
