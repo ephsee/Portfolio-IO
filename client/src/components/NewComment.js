@@ -33,7 +33,7 @@ const commentSubmit = (e) => {
     <div>NewComment
 
         <form onSubmit={commentSubmit}>
-            <input onChange={commentHandler} type='text' placeholder='say hi!' value={input} ></input>
+            <input style={{textAlign: 'center', color: 'red'}} onChange={commentHandler} type='text' placeholder='say hi!' value={input} ></input>
         </form>
     </div>
   )

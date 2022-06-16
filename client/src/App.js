@@ -5,8 +5,6 @@ import NewComment from './components/NewComment';
 
 function App() {
 
-let aColor = Math.floor(Math.random()*16777215).toString(16);
-
 //   const Heading1 = styled.h1`
 //     font-family: monospace;
 //     text-align: center;
@@ -105,8 +103,8 @@ let aColor = Math.floor(Math.random()*16777215).toString(16);
 
       {/* in here render images on click for personal picture / city / contact information and links */}
 
-      <h1>Here we go</h1>
-      <div>Hello... my name is: <h1>{first}</h1> <h1>{last}</h1> <img height="200" src={pic}/> </div>
+      <h1 style={{color: "#" + Math.floor(Math.random()*16777215).toString(16)}}>Here we go</h1>
+      <div>Hello... my name is:<h1 >{first}</h1> <h1>{last}</h1> <img height="200" src={pic}/> </div>
       { first === '' ? <button onClick={showName}>Name</button> : null }
       <div>I am a Software Engineer and Web Developer living in: <h1>{address}</h1> <img height='200' src={bk}/></div>
       { address === '' ? <button onClick={showPlace}>City</button> : null }
