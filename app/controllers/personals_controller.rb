@@ -1,5 +1,7 @@
 class PersonalsController < ApplicationController
 
+    # wrap_parameters format: [:json, :xml, :url_encoded_form, :multipart_form]
+
     def index
         render json: Personal.all
     end
